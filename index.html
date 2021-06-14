@@ -15,6 +15,7 @@
       </header>
       <main>
         <div class="goods-list">
+          <div class="stub" v-if="filteredGoods.length == 0">Нет данных</div>
           <div class="goods-item" v-for="good in filteredGoods">
             <h3>{{good.product_name}}</h3>
             <p>{{good.price}}</p>
