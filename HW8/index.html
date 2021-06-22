@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <title>eShop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <search :filtergoods="filtergoods"></search>
+      <button class="cart-button" type="button">Корзина</button>
+    </header>
+    <main>
+      <connection-error :connectionerr="connectionerr"></connection-error>
+      <goods-list :goods="filteredGoods" :getproductscart="getproductscart"></goods-list>
+      <busket-list :goods="basketGoods" :getproductscart="getproductscart"></busket-list>
+    </main>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="dist/app.js"></script>
+
+</html>
